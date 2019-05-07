@@ -1,29 +1,59 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <Header></Header>
+    <router-view />
   </div>
 </template>
 
+<script>
+import Header from '@/components/Header.vue'
+
+export default {
+  name: 'app',
+  components: {
+    Header
+  }
+}
+</script>
+
 <style lang="scss">
+@import "./lib/_fonts.scss";
+@import "./lib/_colors.scss";
+@import "./lib/_mixins.scss";
+
+* {
+  box-sizing: border-box;
+}
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Poppins";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  color: $orange;
+  max-width: 100vw;
+  height: 100vh;
+  padding-top: 52px;
+
+  @include tablet {
+    padding-top: 90px;
+  }
+
+  &:before {
+    content: ' ';
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-image: url('./assets/images/FINALBRIGHTMAP.jpg');
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.05;
   }
 }
 </style>
