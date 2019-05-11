@@ -6,6 +6,7 @@ public
 ./package.json
 ./postcss.config.json
 ./babel.config.js
+./README.md
 
 # local env files
 .env.local
