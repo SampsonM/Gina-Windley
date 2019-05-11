@@ -18,14 +18,13 @@
 
         <router-link
           class="main-content__img-link" 
-          to="/project">
+          to="/about">
 
           <p class="main-content__img-link-text">
             About
           </p>
 
           <img
-            @click="updateInfoPageData('About')"
             class="main-content__img" 
             src="../assets/images/logo.png" />
 

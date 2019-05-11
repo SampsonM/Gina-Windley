@@ -1,23 +1,35 @@
 <template>
   <div class="projects">
-    <p>{{ infoPageData }}</p>
+    <p>{{ infoPageData.description }}</p>
+    <div class="image-content">
+      <ImageBox :images="images" />
+    </div>
   </div>
 </template>
 
 <script>
-import GinaLine from '@/components/GinaLine.vue'
+import ImageBox from '@/components/ImageBox.vue'
 import { mapState } from 'vuex'
 
 export default {
   name: 'Projects',
   components: {
-    GinaLine
+    ImageBox
   },
   computed: {
     ...mapState([
       'infoPageData'
-    ])
+    ]),
+    images() {
+      return this.infoPageData.images
+    }
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.image-content {
+  height: 500px;
+}
+</style>
 

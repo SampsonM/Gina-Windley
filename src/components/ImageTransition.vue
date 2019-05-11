@@ -1,12 +1,12 @@
 <template>
 	<transition name="fade">
 		<div
-			@click="updateInfoPageData(image.project)"
+			@click="handleClick()"
 			class="image"
 			:key="imageURL"
 			:alt="image.alt" 
 			v-lazy:background-image="imageURL">
-			
+
 			<p class="image__text">
 				{{ image.section }}
 			</p>
@@ -18,11 +18,13 @@ import { mapActions } from 'vuex';
 
 export default {
 	props: {
-		image: Object
+		image: Object,
+		isLink: Boolean
 	},
 	computed: {
 		imageURL() {
-			return this.image.isFirstScreen ? this.getImgUrl(this.image.URL) : this.image.URL
+			console.log(this.image.URL)
+			return this.image.isLocalImg ? this.getImgUrl(this.image.URL) : this.image.URL
 		}
 	},
 	methods: {
@@ -32,7 +34,12 @@ export default {
 		},
 		...mapActions([
 			'updateInfoPageData'
-		])
+		]),
+		handleClick() {
+			if (this.isLink) {
+				this.updateInfoPageData(this.image)
+			}
+		}
 	}
 }
 </script>

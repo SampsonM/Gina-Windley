@@ -1,13 +1,14 @@
 <template>
 	<div class="image-box">
 		<i class="fas fa-chevron-left"
+			:class="{ 'fas__hide' : this.images.length < 2 }"
 			@click="slideImgLeft()">
 		</i>
 		
 		<router-link
 			v-if="isLink"
 			:to="link">
-			<ImageTransition :image="image" />
+			<ImageTransition :image="image" :isLink="true" />
 		</router-link>
 
 		<span v-else>
@@ -15,6 +16,7 @@
 		</span>
 
 		<i class="fas fa-chevron-right"
+			:class="{ 'fas__hide' : this.images.length < 2 }"
 			@click="slideImgRight()">
 		</i>
 	</div>
@@ -102,6 +104,10 @@ export default {
 
 	@include tablet {
 		font-size: 30px;
+	}
+
+	&__hide {
+		display: none;
 	}
 }
 

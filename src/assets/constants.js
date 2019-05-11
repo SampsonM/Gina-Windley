@@ -1,28 +1,27 @@
 export const projects = [
   {
     URL: "./fdp/1.jpg",
-    isFirstScreen: true,
-    project: "fdp",
+    isLocalImg: true,
     section: "projects",
     description: "project FDP description",
     alt: "Final Design Project",
     images: [
       {
         URL: "./fdp/1.jpg",
-        alt: "Final design project"
+        alt: "Final design project",
+        isLocalImg: true,
       }
     ]
   },
   {
     URL: "https://lh3.googleusercontent.com/g6ytPU--43XeMoQzp2TS_7yzxjiO9KvmGT4d1ZFVeWH0_30TOSp9NBtP0UZuCm2KYwOdwZlryYDPqf4XfJvWS3nEhOd85ROOYAjJXI_vIlTu4KDvJq8bJGQO98svgboS8vs9duGlkyqnPTn9HZQx35lzclZ_JE7aRbiiAWYl2QLCR-yeGl1fLPGwr0u-1G7CkjWiLsZju8rfoLGl2dF4yE8HbCfvhV7R7dwPFGcl5yPlIEXfm7Tz6NUH45sdIrm74eP0I0esGkvtJoA-Ne2uRXRk1_nH47GNtDiZcZ1sfV74ZHDZP4yqIHGllO_-cEjFo42Fm6HnYEEnyfAsEOQwJ8tCP1jN9VCPMDZQpIUCcK8N-HLVAQ9QAWeBY27PWAfCqsMj3j-nR0j6CjWT9trGvxiiQOnMr3M3ou-_qsakiTwmo4QtdqoKZh0sYOOfumMIZA6LGHOHbCoJ69Cfs2iF2utX_kzBdqmZ6ZDej_Mjjg_vdFVUhLcLFgWUZtSU2WgSqZx-MPNbkXbbHuOwUTJztNDqkJCrzG9ym8BgVXyBOTtbF4QbK5Mn-y-4EzoC65N1LP29sZm-QgZXSgvFjOb4xM6wFlrMJUmuJBwO3RI5ahIppJoIanuRq47umnQdZ2vYWw2mB-sooMhOL-qtQGlCA9erh2Dpkmg=w2504-h1878-no",
-    project: "dnb",
     section: "projects",
     description: "project DNB description",
     alt: "Design and build",
     images: [
       {
         URL: "https://lh3.googleusercontent.com/g6ytPU--43XeMoQzp2TS_7yzxjiO9KvmGT4d1ZFVeWH0_30TOSp9NBtP0UZuCm2KYwOdwZlryYDPqf4XfJvWS3nEhOd85ROOYAjJXI_vIlTu4KDvJq8bJGQO98svgboS8vs9duGlkyqnPTn9HZQx35lzclZ_JE7aRbiiAWYl2QLCR-yeGl1fLPGwr0u-1G7CkjWiLsZju8rfoLGl2dF4yE8HbCfvhV7R7dwPFGcl5yPlIEXfm7Tz6NUH45sdIrm74eP0I0esGkvtJoA-Ne2uRXRk1_nH47GNtDiZcZ1sfV74ZHDZP4yqIHGllO_-cEjFo42Fm6HnYEEnyfAsEOQwJ8tCP1jN9VCPMDZQpIUCcK8N-HLVAQ9QAWeBY27PWAfCqsMj3j-nR0j6CjWT9trGvxiiQOnMr3M3ou-_qsakiTwmo4QtdqoKZh0sYOOfumMIZA6LGHOHbCoJ69Cfs2iF2utX_kzBdqmZ6ZDej_Mjjg_vdFVUhLcLFgWUZtSU2WgSqZx-MPNbkXbbHuOwUTJztNDqkJCrzG9ym8BgVXyBOTtbF4QbK5Mn-y-4EzoC65N1LP29sZm-QgZXSgvFjOb4xM6wFlrMJUmuJBwO3RI5ahIppJoIanuRq47umnQdZ2vYWw2mB-sooMhOL-qtQGlCA9erh2Dpkmg=w2504-h1878-no",
-        alt: "Design and build"
+        alt: "Design and build",
       },
       {
         URL: "https://lh3.googleusercontent.com/CNScxklsJlKJVsVqrn5NW5UKwTIh5yk7xobRxnb8k65aIgvMZzFjJaNu5anmRRXaPbrXnCrDKEppfoncT_NXuC8egeZbq-BVadINrQDkqUU2u9R3eI-6GARvXG9BOw7jsG-5-Tely3_R-TOEkbCtEBbhBZf9dJcY8ZnI-E4yM2exVDAgUTOfSjJ-uVmkREr5H8eMdNfsZF5EioQm436NGBU8tWSlYz5TICoVpZR2KYoQ237Be7cA-HWsig0K2y0bwipnDF475WQvRn26hVeQOpRY7xuHwCt8L8OxBF3BS9ZzDxwhpY7Tp_bVbLIbuTCfgQqziePOpSiriVpvd8kR77R04fhA59M9JJq5RJlI5edhysLRpG9doOCQK_SbWr0VBBb100VFHFEMneVrYS2dBNhsE4aJidBziVQyOZNUXiDP8yrWzpTmbK_JEIRCFhtNRuro09dBxTrvvdB_I2C6UYxRRfzjF2BLA6HULKl6bSnYTFQ3kAVc_fR2UEMorc4F2SkNrGfnA8G-boYXy8WRBoj51-f0TraNswnF4YUA1fM7EudKpeQ2hvdsbPKKmgzeHeUlQhE2HHmM6mWqYWAL5wW-7cU7NmMgNGsDoEa7BQGLhNsCkFHJPMTUQqHtXFNqbL5CRwHnUvHkOQ9nfm1uSo_Wb4glofo=w1600-h1200-no",
@@ -44,7 +43,6 @@ export const projects = [
   },
   {
     URL: "https://lh3.googleusercontent.com/QS_adK5z569OU8SgYDqwpdw1EOtNXgUCiuUHHLt9ZXTXj1PHBdW9XG4vjFLihREDsoOjc1ouv19VOwEOa-hN1A4s9prqY8zNzNUaYzGmOqBwSErzw7DjDiau3JlU8cYwkTp384NU803BGRlPJigiSYGswA6mCXjuP-Xq_vWCGMHLLjJRVXrX7Rz2wjrMnbIHCUHKxxEBpUgA8NgDt9mCoKssj5rJoUeoNiqkJOOavBzcvulruMX1t_0mJbCXL6oazBiJnrWomZ7ii2B-gLrXLOyUiO5dLclBjX3VkUlB6hoVwtQWCNRbM4D48R4-ULkGAcy3Wo2SbLn5gO5w-jBILJ4b-I41900ykKiE7MPCiIXZ6Lc6NYmqXYCxbGJo8gDHSRv73YLbiQof4tD8HjsCRSNLOb3l-9CQBiHOfKGHkrmnOQYLhUWTWmsQmfjsh1XL2v5e6VYWCie8JC5rnvOE3G92Uam0HDr-vXJJWrVLLkRWOs3SsLf4sGHxp-U_WJYiZo9kOiCl9zbyCXqx_jebCzPmnpIbslIAFsS4joQ48w6sco0B7UFiNDCBfq34A7kCS6JWQfU2odEzVL-OxTvTUTkjVk-zD_ISkHikogV0doS0MtebgucRdyOPNxUB0zWuXxlqmh1ZTrGXRFGgVlRBP73kp96BgMA=w2362-h1073-no",
-    project: "north",
     section: "projects",
     description: "project north description",
     alt: "Northumberland Butward Bounds centre",
@@ -73,21 +71,20 @@ export const volunteering = [
   {
     URL: './building/1.jpg',
     section: 'volunteering',
-    isFirstScreen: true,
-    project: 'build',
+    isLocalImg: true,
     alt: 'Volunteered building',
     description: 'volunteer project 3 description',
     images: [
       {
         URL: "./building/1.jpg",
-        alt: "volunteer project 3"
+        alt: "volunteer project 3",
+        isLocalImg: true,
       },
     ]
   },
   {
     URL: 'https://lh3.googleusercontent.com/LlfdIF2yz8oNsz8t3nLgwBzvYRGlEZe20fKNEopKa6MttUXbLCXx73HhMBf-qeb14aONN-ojeLg9JtCSo9ZjMXmmSSLj-xlgUAtWMKaqZs-m6uMH1Jiifm4dde989BZJ4K42GeJv3byU4yj6u7Mj_EGj3OMfvg0D096CxubxGoUSS7frYNoZRZDY9-XM2y2C82KCOA2r3nCtBxHwf3Ctf_8MGjCU67lpvw4U_hi-wRJxOtI2659uVXP9MhM5_E49IHRg1IDMqAvfUcjIbr5loAB_gd_pbsUl5Pku1q3YAgHy9gvgQCxa4OSMvG4OlevRcqbAGsiI-4mF2yES3n7rxjPrS8pCgclDsWONqfO6ghrpQm_V3kXLJOCfClBPDv3pkETb-FguWs9ZmFgq0klQrJyHq57aNUSdQjYyYslkFdK-JIe8B-JIB6reWI4Hrcp0kiqIbmovv3jMc6WnL9SGN-kkPA-fCgCoMMhDHi2bCFLAdyCjtAyVxteUG93RDPKSRLI77qbNUslA4ksPb6TLzOFRqJYZmKz9AHhtFoHgbJV0Ohf0zlPMaZiCWcjCNbxRoNuGbbp6ZT7glRouP4JxHqn1xcfB8ET7DDbSRMf7gOYN-FYLBav31BVBxZz5OzzfpOMlsbBBR6i87Ps7MRcfHJpML9ZLGPM=w3072-h1750-no',
     section: 'volunteering',
-    project: 'ghana',
     alt: 'Ghana rammed earth',
     description: 'volunteer project 1 description',
     images: [
@@ -106,3 +103,9 @@ export const volunteering = [
     ]
   }
 ]
+
+export const about = {
+  URL: "./images/gina.png",
+  description: "About me",
+  alt: "Gina Windey"
+}
