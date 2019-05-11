@@ -11,11 +11,11 @@ const state = {
 const getters = {}
 
 const actions = {
-	updateInfoPageData: ({ commit }, payload) => commit('updateInfoPageData', payload)
+	updateInfoPageData: ({ commit }, payload) => commit('UPDATE_INFO_PAGE_DATA', payload)
 }
 
 const mutations = {
-	updateInfoPageData(state, payload) {
+	UPDATE_INFO_PAGE_DATA(state, payload) {
 		state.infoPageData = payload;
 	}
 }

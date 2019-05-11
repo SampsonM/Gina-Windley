@@ -1,11 +1,11 @@
 <template>
 	<transition name="fade">
 		<div
-			@click="updateInfoPageData(image.Alt)"
+			@click="updateInfoPageData(image.alt)"
 			class="image"
 			:key="image.URL"
-			:style="imageBG"
-			:alt="image.Alt" >
+			:alt="image.Alt" 
+			v-lazy:background-image="image.URL" >
 			
 			<p class="image__text">
 				{{ image.section }}
@@ -21,15 +21,8 @@ export default {
 		image: Object
 	},
 	computed: {
-		imageBG() {
-			return { backgroundImage: 'url(' + this.getImgUrl(this.image.URL) + ')'}
-		}
 	},
 	methods: {
-		getImgUrl(url) {
-			let images = require.context('../assets/images', true, /\.png|\.jpg$/)
-			return images(url)
-		},
 		...mapActions([
 			'updateInfoPageData'
 		])
