@@ -1,14 +1,15 @@
 export default {
   projects: [
     {
-      URL: "./fdp/1.jpg",
+      URL: "/fdp/1.jpg",
+      isFirstScreen: true,
       title: "fdp",
       section: "Projects",
       description: "project FDP description",
       alt: "Final Design Project",
       images: [
         {
-          URL: "https://lh3.googleusercontent.com/AmIisqCwGtbHfGulUCO6Ii3fnDdIcy_26tE9SmY8_FTnoccDIkxGflkcHiBOx-MzhOSXjioi352n7Ze8up4Lq2sRmaJP8lUUpcogJXbWXe4MHLJgKps8xxJYLkqZzOzyyUcbxsH8grQIuVodv3k8xhEqAqfYMvPc6X5KVrmF6aOvCGgM5ZIVKgcA_uufA7WbNJvtuGMJGlRp7sAqWs3gTDAyvW2oL2sjxBgvlSoT9gPRrgODnZl7WGnBRBnaN7XKbbVZiFfAvlKiJF0yjitjKmGlMBMWoeuz59Spr2MRmVZTZW7pyoQrajr_mq6HM9wnPUeS--O5aIEf9yGG7N_zaS8W76BHH1gUwtqKFtObLXs5SDygLjpPzEszdA0TkS3qDp1XlQqJKsmqiZKoKqtle1JJ_e25nIp6EUfjhXFMPwV7rI7MJXaFRqdePSchN537_UW5JyaanezKrWWa2B4IeAQUWM2lcn6jwls-Pd3HzPVnqpPZNv4dR9dvTlM1eGM311ENcqHvD3oxfXAt4oblI63uQHIrixWbcKa3OH-JEVim7kE9BckmcwIiZeR5PmmM5y0ptBKhFxOEYyyeidSv5-Jd6i7rlGAKcEJPDamIs26hPgbjgJKT3hniqs9mECBZHMDsb6HMuHH2mQ3LPNaj847tPUd5EPw=w3246-h1878-no",
+          URL: "/fdp/1.jpg",
           alt: "Final design project"
         }
       ]
@@ -70,14 +71,15 @@ export default {
   ],
   volunteerProjects: [
     {
-      URL: './building/1.jpg',
+      URL: '/building/1.jpg',
       section: 'Volunteering',
+      isFirstScreen: true,
       title: 'volunteer project 3',
       alt: 'Volunteered building',
       description: 'volunteer project 3 description',
       images: [
         {
-          URL: "./building/1.jpg",
+          URL: "/building/1.jpg",
           alt: "volunteer project 3"
         },
       ]

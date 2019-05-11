@@ -1,11 +1,12 @@
 <template>
 	<transition name="fade">
 		<div
-			@click="updateInfoPageData(image.alt)"
+			@click="updateInfoPageData(image.Alt)"
 			class="image"
-			:key="image.URL"
+			:key="imageURL"
+			:style="{ imageBG : isFirstScreen }"
 			:alt="image.Alt" 
-			v-lazy:background-image="image.URL" >
+			v-lazy:background-image="{ imageURL : !isFirstScreen }">
 			
 			<p class="image__text">
 				{{ image.section }}
@@ -21,8 +22,21 @@ export default {
 		image: Object
 	},
 	computed: {
+		imageBG() {
+			return { backgroundImage: 'url(' + this.getImgUrl(this.image.URL) + ')'}
+		},
+		isFirstScreen() {
+			return this.image.isFirstScreen
+		},
+		imageURL() {
+			return this.image.URL
+		}
 	},
 	methods: {
+		getImgUrl(url) {
+			let images = require.context('../assets/images', true, /\.jpg$/)
+			return images(url)
+		},
 		...mapActions([
 			'updateInfoPageData'
 		])
