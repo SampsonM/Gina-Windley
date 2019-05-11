@@ -42,9 +42,6 @@ export default {
 	computed: {
 		image() {
 			return this.images[this.imgNum]
-		},
-		isMobileDevice() {
-			return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 		}
 	},
 	methods: {
@@ -77,7 +74,7 @@ export default {
 		}
 	},
 	mounted() {
-		if (this.isMobileDevice && this.shouldAnimate) {
+		if (this.shouldAnimate) {
 			this.resetInterval()
 		}
 	}
