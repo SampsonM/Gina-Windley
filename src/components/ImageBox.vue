@@ -43,9 +43,6 @@ export default {
 		image() {
 			return this.images[this.imgNum]
 		},
-		imageBG() {
-			return { backgroundImage: 'url(' + this.getImgUrl(this.image.URL) + ')'}
-		},
 		isMobileDevice() {
 			return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 		}
@@ -76,7 +73,7 @@ export default {
 				clearInterval(this.interval)
 			}
 
-			this.interval = setInterval(this.slideImgRightAuto, 5000)
+			this.interval = setInterval(this.slideImgRightAuto, 15000)
 		}
 	},
 	mounted() {
