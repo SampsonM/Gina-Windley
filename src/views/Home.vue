@@ -11,7 +11,7 @@
       <div class="main-content__left">
         <ImageBox
           class="main-content__img-box volunteer"
-          :images="volunteerProjects"
+          :images="volunteering"
           :isLink="true"
           link="/project"
           :shouldAnimate="false" />
@@ -52,7 +52,7 @@ export default {
   },
   data() {
     return {
-      volunteerProjects: constants.volunteerProjects,
+      volunteering: constants.volunteering,
       projects: constants.projects
     }
   },

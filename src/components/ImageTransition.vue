@@ -1,7 +1,7 @@
 <template>
 	<transition name="fade">
 		<div
-			@click="updateInfoPageData(image.alt)"
+			@click="updateInfoPageData(image.project)"
 			class="image"
 			:key="imageURL"
 			:alt="image.alt" 
