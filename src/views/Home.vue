@@ -41,7 +41,7 @@
 // @ is an alias to /src
 import ImageBox from '@/components/ImageBox.vue'
 import GinaLine from '@/components/GinaLine.vue'
-import constants from '../assets/constants.js'
+import { volunteering, projects } from '../assets/constants.js'
 import { mapActions } from 'vuex'
 
 export default {
@@ -52,8 +52,8 @@ export default {
   },
   data() {
     return {
-      volunteering: constants.volunteering,
-      projects: constants.projects
+      volunteering,
+      projects
     }
   },
   methods: {
