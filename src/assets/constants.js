@@ -1,7 +1,7 @@
 export default {
   projects: [
     {
-      URL: "https://lh3.googleusercontent.com/AmIisqCwGtbHfGulUCO6Ii3fnDdIcy_26tE9SmY8_FTnoccDIkxGflkcHiBOx-MzhOSXjioi352n7Ze8up4Lq2sRmaJP8lUUpcogJXbWXe4MHLJgKps8xxJYLkqZzOzyyUcbxsH8grQIuVodv3k8xhEqAqfYMvPc6X5KVrmF6aOvCGgM5ZIVKgcA_uufA7WbNJvtuGMJGlRp7sAqWs3gTDAyvW2oL2sjxBgvlSoT9gPRrgODnZl7WGnBRBnaN7XKbbVZiFfAvlKiJF0yjitjKmGlMBMWoeuz59Spr2MRmVZTZW7pyoQrajr_mq6HM9wnPUeS--O5aIEf9yGG7N_zaS8W76BHH1gUwtqKFtObLXs5SDygLjpPzEszdA0TkS3qDp1XlQqJKsmqiZKoKqtle1JJ_e25nIp6EUfjhXFMPwV7rI7MJXaFRqdePSchN537_UW5JyaanezKrWWa2B4IeAQUWM2lcn6jwls-Pd3HzPVnqpPZNv4dR9dvTlM1eGM311ENcqHvD3oxfXAt4oblI63uQHIrixWbcKa3OH-JEVim7kE9BckmcwIiZeR5PmmM5y0ptBKhFxOEYyyeidSv5-Jd6i7rlGAKcEJPDamIs26hPgbjgJKT3hniqs9mECBZHMDsb6HMuHH2mQ3LPNaj847tPUd5EPw=w3246-h1878-no",
+      URL: "./fdp/1.jpg",
       title: "fdp",
       section: "Projects",
       description: "project FDP description",
@@ -70,14 +70,14 @@ export default {
   ],
   volunteerProjects: [
     {
-      URL: 'https://lh3.googleusercontent.com/ygmD6fhzzcrT6b3REDfBwK1hYTc8_kpqu5vrlhb8W8AJeGUcVkDQFkzrS3g5jI12MBaPSMriZkA1yXzh6aiDTUY9zB_rACbmibZXePtiW5ENptIU8ptXneL0143V9cKeZFMhieVzZardRFsdn2WXiPLkJKfQfa9iKoxPrGjGudmlyDs4QCpXMSF_i2jEkVYCVhcIrAyB9Q51kIlGblYv_6x9M1AI8798A9nUW-2aDHWdNafHGGF9VOgUyxTbk6_XpVSAinOP9nRMQQjKo6NIDZ_DmjhFKttDSZOyIRR0s8v8g-GXikDq28S9a8jJzgKmzyAqYqmYiLvXnAApzd_JsTQgyWV0c2_7s-szb2yh3KlkpuQyO39EWyIfpnC3kWIv-LK0YoBuzIfFQEVUV_Lnze3ZvCFhj11BnRT6vbbm7yAfHcqmabrxpnfI3D2KdzXgJLU0gFBsk9u3e85H_ZNawBfNBCWRvXuMkrO14dQkL6vN5RaLCcIri-iD7HvjxdjnQaZkNp_Gt1q7JZsTxBNymFpRc_oUoa_lC8VfL99hkTxjiQv0yExcD7p_CVuTGxlThUCE-JK9zcsHsNcNxVE9I8bedPceLfQwvM34VwcB1tDsCPtMNzk5dhJeRqb6GXp38xqtRLwarTME3MnvVvm8IT88wFjc82E=w640-h853-no',
+      URL: './building/1.jpg',
       section: 'Volunteering',
       title: 'volunteer project 3',
       alt: 'Volunteered building',
       description: 'volunteer project 3 description',
       images: [
         {
-          URL: "https://lh3.googleusercontent.com/ygmD6fhzzcrT6b3REDfBwK1hYTc8_kpqu5vrlhb8W8AJeGUcVkDQFkzrS3g5jI12MBaPSMriZkA1yXzh6aiDTUY9zB_rACbmibZXePtiW5ENptIU8ptXneL0143V9cKeZFMhieVzZardRFsdn2WXiPLkJKfQfa9iKoxPrGjGudmlyDs4QCpXMSF_i2jEkVYCVhcIrAyB9Q51kIlGblYv_6x9M1AI8798A9nUW-2aDHWdNafHGGF9VOgUyxTbk6_XpVSAinOP9nRMQQjKo6NIDZ_DmjhFKttDSZOyIRR0s8v8g-GXikDq28S9a8jJzgKmzyAqYqmYiLvXnAApzd_JsTQgyWV0c2_7s-szb2yh3KlkpuQyO39EWyIfpnC3kWIv-LK0YoBuzIfFQEVUV_Lnze3ZvCFhj11BnRT6vbbm7yAfHcqmabrxpnfI3D2KdzXgJLU0gFBsk9u3e85H_ZNawBfNBCWRvXuMkrO14dQkL6vN5RaLCcIri-iD7HvjxdjnQaZkNp_Gt1q7JZsTxBNymFpRc_oUoa_lC8VfL99hkTxjiQv0yExcD7p_CVuTGxlThUCE-JK9zcsHsNcNxVE9I8bedPceLfQwvM34VwcB1tDsCPtMNzk5dhJeRqb6GXp38xqtRLwarTME3MnvVvm8IT88wFjc82E=w640-h853-no",
+          URL: "./building/1.jpg",
           alt: "volunteer project 3"
         },
       ]
