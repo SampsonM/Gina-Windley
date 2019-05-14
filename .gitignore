@@ -5,5 +5,4 @@ package-lock.json
 package.json
 postcss.config.js
 vue.config.js
-/src
 public
