@@ -1,4 +1,4 @@
 module.exports = {
 	publicPath: '',
-	entryPoint: 'dist/index.html'
+	entry: 'dist/index.html'
 };
