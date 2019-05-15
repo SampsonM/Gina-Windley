@@ -36,7 +36,7 @@ export default {
   padding-top: 52px;
 
   @include tablet {
-    padding-top: 90px;
+    padding-top: 66px;
   }
 
   &:before {

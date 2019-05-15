@@ -1,6 +1,5 @@
 <template>
   <div class="projects">
-    <p>{{ infoPageData.description }}</p>
     <div class="image-content">
       <ImageBox :images="images" />
     </div>

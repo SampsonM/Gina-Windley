@@ -23,7 +23,6 @@ export default {
 	},
 	computed: {
 		imageURL() {
-			console.log(this.image.URL)
 			return this.image.isLocalImg ? this.getImgUrl(this.image.URL) : this.image.URL
 		}
 	},
@@ -69,7 +68,7 @@ export default {
 }
 
 .fade-enter-active, .fade-leave-active {
-	transition: opacity 1400ms linear;
+	transition: opacity 1100ms linear;
 }
 
 .fade-enter-to, .fade-leave {
