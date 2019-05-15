@@ -4,6 +4,5 @@ babel.config.js
 package-lock.json
 package.json
 postcss.config.js
-vue.config.js
 public
 ./index.html
