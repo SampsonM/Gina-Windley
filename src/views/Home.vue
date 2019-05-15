@@ -71,6 +71,7 @@ export default {
 
   @include tablet {
 		height: calc(100vh - 111px);
+    margin-top: 26px;
 	}
 }
 
@@ -87,7 +88,7 @@ export default {
     flex-direction: row-reverse;
     justify-content: space-between;
     margin: 0;
-    padding: 20px;
+    padding: 15px;
     height: 100%;
     border-bottom: 1px solid $orange;
   }
