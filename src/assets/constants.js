@@ -74,10 +74,7 @@ export const projects = [
         section: "Site plan",
       }
     ]
-  }
-]
-
-export const volunteering = [
+  },
   {
     URL: './building/1.jpg',
     section: 'volunteering',
@@ -111,11 +108,19 @@ export const volunteering = [
         alt: "volunteer project 3"
       },
     ]
+  },
+  {
+    URL: "./logo.png",
+    isLocalImg: true,
+    section: "about me",
+    description: "About me",
+    images: [
+      {
+        URL: "./logo.png",
+        isLocalImg: true,
+        alt: "gina wnidley",
+        section: "about me"
+      }
+    ]
   }
 ]
-
-export const about = {
-  URL: "./images/gina.png",
-  description: "About me",
-  alt: "Gina Windey"
-}

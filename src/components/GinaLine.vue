@@ -33,6 +33,7 @@ export default {
   justify-content: space-evenly;
   width: 100vw;
   border: 1px solid $orange;
+  background:#ffffffce;
   color: $orange;
   position: sticky;
   letter-spacing: 5px;
@@ -47,7 +48,6 @@ export default {
     bottom: auto;
     top: 65px;
     border-bottom: 1px solid $orange;
-    background-color: #ffffffa3;
   }
 }
 
