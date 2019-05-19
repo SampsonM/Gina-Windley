@@ -7,8 +7,8 @@
               : image.URL"
               class="projects-list__project-bg"
               @click="handleClick(image)">
-          <p>{{image.alt}}</p>
         </div>
+        <p>hello</p>
       </router-link>
     </div>
   </div>
@@ -22,14 +22,16 @@ export default {
   },
   computed: {
     nestedImages() {
-      const imgs = this.images.reduce((acc, img) => {
-        return [...acc, ...img.images]
-      }, [])
+      let imgs = []
+
+      for (let i = 0; i < this.images.length; i++) {
+        imgs.push(...this.images[i].images)
+      }
 
       function shuffleArray(a) {
         for (let i = a.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
-            [a[i], a[j]] = [a[j], a[i]];
+            [a[i], a[j]] = [a[j], a[i]]
         }
         return a
       }
@@ -67,6 +69,7 @@ export default {
   scroll-snap-type: both mandatory;  
   grid-gap: 10px;
   scroll-padding: 1rem;
+  padding: 10px;
 
   @include tablet {
     grid-template-columns: repeat(4, 40vw);
@@ -86,10 +89,11 @@ export default {
     }
 
     & p {
-      position: absolute;
-      bottom: 10px;
-      left: 15px;
+      display: none;
+      position: relative;
       margin: 0;
+      font-weight: 500;
+      font-size: 25px;
     }
   }
 
@@ -99,6 +103,17 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    transition: 400ms;
+
+    &:hover {
+      transform: scale(1.015);
+      opacity: 0.3;
+
+      & > p {
+        display: block;
+        opacity: 1;
+      }
+    }
   }
 }
 </style>

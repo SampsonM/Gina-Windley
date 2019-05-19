@@ -16,7 +16,7 @@
 import ImageBox from '@/components/ImageBox.vue'
 import GinaLine from '@/components/GinaLine.vue'
 import ProjectsContainer from '@/components/ProjectsContainer.vue'
-import { volunteering, projects } from '../assets/constants.js'
+import { projects } from '../assets/constants.js'
 import { mapActions } from 'vuex'
 
 export default {
@@ -28,7 +28,6 @@ export default {
   },
   data() {
     return {
-      volunteering,
       projects
     }
   },
