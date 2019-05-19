@@ -1,14 +1,14 @@
 <template>
   <div class="projects-list">
     <div class="projects-list__project" v-for="(image, i) in nestedImages" :key="i">
-      <router-link to="/projects">
+      <router-link to="/project">
         <div v-lazy:background-image="image.isLocalImg 
               ? getImgUrl(image.URL)
               : image.URL"
               class="projects-list__project-bg"
               @click="handleClick(image)">
         </div>
-        <p>hello</p>
+        <p class="projects-list__project-bg--text">{{ image.section }}</p>
       </router-link>
     </div>
   </div>
@@ -28,7 +28,7 @@ export default {
         imgs.push(...this.images[i].images)
       }
 
-      function shuffleArray(a) {
+      function shuffleImages(a) {
         for (let i = a.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [a[i], a[j]] = [a[j], a[i]]
@@ -36,7 +36,7 @@ export default {
         return a
       }
 
-      return shuffleArray(imgs)
+      return shuffleImages(imgs)
     },
   },
   methods: {
@@ -59,8 +59,8 @@ export default {
 
 .projects-list {
   display: grid;
-  grid-template-columns: repeat(4, 60vw);
-  grid-template-rows: repeat(4, 50vw);;
+  grid-template-columns: repeat(4, 50vw);
+  grid-template-rows: repeat(4, 40vw);;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
@@ -69,11 +69,11 @@ export default {
   scroll-snap-type: both mandatory;  
   grid-gap: 10px;
   scroll-padding: 1rem;
-  padding: 10px;
 
   @include tablet {
-    grid-template-columns: repeat(4, 40vw);
-    grid-template-rows: repeat(4, 30vw);;
+    padding: 10px;
+    grid-template-columns: repeat(4, 30vw);
+    grid-template-rows: repeat(4, 20vw);;
   }
 
   &__project {
@@ -82,6 +82,20 @@ export default {
     list-style: none;
     scroll-snap-align: start;
     position: relative;
+    transition: 400ms;
+
+    &:hover {
+      & .projects-list__project-bg {
+        transition: 500ms;
+        opacity: 0.1;
+        transform: scale(1.015);
+      }
+
+      & .projects-list__project-bg--text {
+        transition: 500ms;
+        opacity: 1;
+      }
+    }
 
     & a {
       text-decoration: none;
@@ -89,11 +103,14 @@ export default {
     }
 
     & p {
-      display: none;
-      position: relative;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       margin: 0;
       font-weight: 500;
       font-size: 25px;
+      opacity: 0;
     }
   }
 
@@ -103,17 +120,6 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    transition: 400ms;
-
-    &:hover {
-      transform: scale(1.015);
-      opacity: 0.3;
-
-      & > p {
-        display: block;
-        opacity: 1;
-      }
-    }
   }
 }
 </style>

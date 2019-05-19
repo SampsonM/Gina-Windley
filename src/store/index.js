@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import 'es6-promise/auto'
 
+import { projects } from '../assets/constants'
+
 Vue.use(Vuex)
 
 const state = {
@@ -11,7 +13,12 @@ const state = {
 const getters = {}
 
 const actions = {
-	updateInfoPageData: ({ commit }, payload) => commit('UPDATE_INFO_PAGE_DATA', payload)
+	updateInfoPageData: ({ commit, state }, payload) => {
+		
+		const data = projects.find(proj => proj.name === payload.section)
+
+		commit('UPDATE_INFO_PAGE_DATA', data)
+	}
 }
 
 const mutations = {

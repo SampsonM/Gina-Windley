@@ -53,7 +53,7 @@ export default {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.05;
+    opacity: 0.03;
   }
 }
 </style>
