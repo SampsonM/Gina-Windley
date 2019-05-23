@@ -32,7 +32,7 @@ export default {
   text-align: center;
   color: $orange;
   max-width: 100vw;
-  height: 100vh;
+  height: 100%;
   padding-top: 52px;
 
   @include tablet {
@@ -53,7 +53,7 @@ export default {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.05;
+    opacity: 0.03;
   }
 }
 </style>

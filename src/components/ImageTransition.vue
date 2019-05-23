@@ -23,12 +23,13 @@ export default {
 	},
 	computed: {
 		imageURL() {
+			console.log(this.image)
 			return this.image.isLocalImg ? this.getImgUrl(this.image.URL) : this.image.URL
 		}
 	},
 	methods: {
 		getImgUrl(url) {
-			let images = require.context('../assets/images', true, /\.jpg$/)
+			let images = require.context('../assets/images', true, /\.jpg|\.png$/)
 			return images(url)
 		},
 		...mapActions([
@@ -55,6 +56,7 @@ export default {
 	margin: 0 auto;
 	background-size: cover;
 	background-position: center center;
+	background-color: $orange;
 
 	&__text {
 		color: $orange;
