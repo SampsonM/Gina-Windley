@@ -56,6 +56,7 @@ export default {
 	margin: 0 auto;
 	background-size: cover;
 	background-position: center center;
+	background-color: $orange;
 
 	&__text {
 		color: $orange;

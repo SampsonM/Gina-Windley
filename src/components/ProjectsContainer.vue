@@ -6,6 +6,7 @@
               ? getImgUrl(image.URL)
               : image.URL"
               class="projects-list__project-bg"
+              lazy="loading"
               @click="handleClick(image)">
         </div>
         <p class="projects-list__project-bg--text">{{ image.section }}</p>
@@ -15,6 +16,8 @@
 </template>
 <script>
 import { mapActions } from 'vuex';
+import Trianglify from 'trianglify'
+import { colors } from '../assets/constants'
 
 export default {
 	props: {
@@ -23,6 +26,19 @@ export default {
   computed: {
     nestedImages() {
       let imgs = []
+
+      for (let i = 0; i < 5; i++) {
+        let pattern = Trianglify({
+          height: window.innerHeight,
+          width: window.innerWidth,
+          cell_size: 600 + Math.random() * 65,
+          x_colors: colors
+        })
+
+        imgs.push({
+          URL: pattern.png()
+        })
+      }
 
       for (let i = 0; i < this.images.length; i++) {
         imgs.push(...this.images[i].images)
@@ -58,36 +74,46 @@ export default {
 @import "../lib/_mixins.scss";
 
 .projects-list {
-  display: grid;
-  grid-template-columns: repeat(4, 50vw);
-  grid-template-rows: repeat(4, 40vw);;
+  display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
   height: 100%;
   overflow: scroll;
-  scroll-snap-type: both mandatory;  
+  scroll-snap-type: both mandatory;
   grid-gap: 10px;
   scroll-padding: 1rem;
 
   @include tablet {
+    display: grid;
     padding: 10px;
     grid-template-columns: repeat(4, 30vw);
-    grid-template-rows: repeat(4, 20vw);;
+    grid-template-rows: repeat(5, 20vw);
   }
 
   &__project {
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
     list-style: none;
     scroll-snap-align: start;
     position: relative;
     transition: 400ms;
+    background-color: #f98433;
+
+    @include tablet {
+      margin-bottom: 0;
+      height: auto;
+      width: auto;
+    }
 
     &:hover {
+      transition: 500ms;
+      background-color: #fdd0a3;
+
       & .projects-list__project-bg {
         transition: 500ms;
-        opacity: 0.1;
+        opacity: 0.08;
         transform: scale(1.015);
       }
 
@@ -99,7 +125,7 @@ export default {
 
     & a {
       text-decoration: none;
-      color: $orange;
+      color: white;
     }
 
     & p {
@@ -120,6 +146,10 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+    &[lazy=loading] {
+      background-color: $orange;
+    }
   }
 }
 </style>
