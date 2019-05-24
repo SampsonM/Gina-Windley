@@ -1,23 +1,32 @@
 <template>
   <div class="projects-list">
-    <div class="projects-list__project" v-for="(image, i) in nestedImages" :key="i">
-      <router-link to="/project">
-        <div v-lazy:background-image="image.isLocalImg 
-              ? getImgUrl(image.URL)
-              : image.URL"
-              class="projects-list__project-bg"
-              lazy="loading"
-              @click="handleClick(image)">
+    <div
+      class="projects-list__project"
+      v-for="(image, i) in nestedImages"
+      :key="i" :class="{ 'no-hover' : image.link === '' }">
+      
+      <router-link :to="image.link">
+        <div
+          v-lazy:background-image="image.isLocalImg 
+            ? getImgUrl(image.URL)
+            : image.URL"
+          class="projects-list__project-bg"
+          lazy="loading"
+          @click="handleClick(image)">
         </div>
-        <p class="projects-list__project-bg--text">{{ image.section }}</p>
+
+        <p @click="handleClick(image)"
+          class="projects-list__project-bg--text">
+          {{ image.section }}
+        </p>
       </router-link>
+
     </div>
   </div>
 </template>
 <script>
 import { mapActions } from 'vuex';
-import Trianglify from 'trianglify'
-import { colors } from '../assets/constants'
+import { patternGen } from '../helpers'
 
 export default {
 	props: {
@@ -28,15 +37,9 @@ export default {
       let imgs = []
 
       for (let i = 0; i < 5; i++) {
-        let pattern = Trianglify({
-          height: window.innerHeight,
-          width: window.innerWidth,
-          cell_size: 600 + Math.random() * 65,
-          x_colors: colors
-        })
-
         imgs.push({
-          URL: pattern.png()
+          URL: patternGen(),
+          link: ''
         })
       }
 
@@ -120,6 +123,17 @@ export default {
       & .projects-list__project-bg--text {
         transition: 500ms;
         opacity: 1;
+      }
+    }
+
+    &.no-hover {
+      .projects-list__project-bg {
+        opacity: 1;
+        transform: scale(1)
+      }
+
+      .projects-list__project-bg--text {
+        opacity: 0;
       }
     }
 

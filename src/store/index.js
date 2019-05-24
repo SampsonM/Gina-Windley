@@ -14,8 +14,11 @@ const getters = {}
 
 const actions = {
 	updateInfoPageData: ({ commit, state }, payload) => {
+		console.log('hello', payload.section)
 		
-		const data = projects.find(proj => proj.name === payload.section)
+		const data = projects.find(proj => {
+			console.log(proj.name)
+			return proj.name === payload.section})
 
 		commit('UPDATE_INFO_PAGE_DATA', data)
 	}
