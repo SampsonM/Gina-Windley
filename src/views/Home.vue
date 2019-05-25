@@ -13,7 +13,6 @@
 
 <script>
 // @ is an alias to /src
-import ImageBox from '@/components/ImageBox.vue'
 import GinaLine from '@/components/GinaLine.vue'
 import ProjectsContainer from '@/components/ProjectsContainer.vue'
 import { projects } from '../assets/constants.js'
@@ -22,7 +21,6 @@ import { mapActions } from 'vuex'
 export default {
   name: 'home',
   components: {
-    ImageBox,
     GinaLine,
     ProjectsContainer
   },
@@ -70,14 +68,13 @@ export default {
   }
 
   &__img-box {
-    height: 49%;
+    height: 100%;
     width: 100%;
 
     @include tablet {
       position: relative;
       margin: 0;
       float: right;
-      height: 100%;
     }
   }
 }

@@ -5,7 +5,7 @@
       v-for="(image, i) in nestedImages"
       :key="i" :class="{ 'no-hover' : image.link === '' }">
       
-      <router-link :to="image.link">
+      <router-link :to="image.link" v-if="image.link">
         <div
           v-lazy:background-image="image.isLocalImg 
             ? getImgUrl(image.URL)
@@ -21,26 +21,46 @@
         </p>
       </router-link>
 
+      <canvas :class="`canvas-${image.id}`" v-if="!image.link"></canvas>
+
     </div>
   </div>
 </template>
 <script>
 import { mapActions } from 'vuex';
-import { patternGen } from '../helpers'
+import { patternGen } from '../helpers';
 
 export default {
+  data() {
+    return {
+      nestedImages: [],
+    }
+  },
 	props: {
 		images: Array
   },
-  computed: {
-    nestedImages() {
+  created() {
+    this.nestedImages = this.getShuffledImages()
+  },
+  mounted() {
+    this.updateCanvasPatterns()
+  },
+  methods: {
+    ...mapActions([
+			'updateInfoPageData'
+		]),
+    getImgUrl(url) {
+			let images = require.context('../assets/images', true, /\.jpg|\.png$/)
+			return images(url)
+    },
+    handleClick(image) {
+      this.updateInfoPageData(image)
+    },
+    getShuffledImages() {
       let imgs = []
 
       for (let i = 0; i < 5; i++) {
-        imgs.push({
-          URL: patternGen(),
-          link: ''
-        })
+        imgs.push({ id: i })
       }
 
       for (let i = 0; i < this.images.length; i++) {
@@ -57,18 +77,12 @@ export default {
 
       return shuffleImages(imgs)
     },
-  },
-  methods: {
-    ...mapActions([
-			'updateInfoPageData'
-		]),
-    getImgUrl(url) {
-			let images = require.context('../assets/images', true, /\.jpg|\.png$/)
-			return images(url)
+    updateCanvasPatterns() {
+      for (let i = 0; i < 5; i++) {
+        const pattern = patternGen();
+        pattern.canvas(document.querySelector(`.canvas-${i}`))
+      }
     },
-    handleClick(image) {
-      this.updateInfoPageData(image)
-    }
   }
 }
 </script>
@@ -103,6 +117,7 @@ export default {
     position: relative;
     transition: 400ms;
     background-color: #f98433;
+    overflow: hidden;
 
     @include tablet {
       margin-bottom: 0;
@@ -115,13 +130,13 @@ export default {
       background-color: #fdd0a3;
 
       & .projects-list__project-bg {
-        transition: 500ms;
+        transition: 300ms ease-in;
         opacity: 0.08;
-        transform: scale(1.015);
+        transform: scale(1.05);
       }
 
       & .projects-list__project-bg--text {
-        transition: 500ms;
+        transition: 300ms ease-in;
         opacity: 1;
       }
     }
@@ -152,9 +167,15 @@ export default {
       font-size: 25px;
       opacity: 0;
     }
+
+    canvas {
+      height: 100%;
+      width: 100%;
+    }
   }
 
   &__project-bg {
+    transition: 300ms;
     height: 100%;
     width: 100%;
     background-size: cover;

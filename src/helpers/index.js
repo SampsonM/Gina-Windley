@@ -2,12 +2,10 @@ import { colors } from '../assets/constants'
 import Trianglify from 'trianglify'
 
 export const patternGen = () => {
-	let pattern = Trianglify({
+	return Trianglify({
 		height: window.innerHeight,
 		width: window.innerWidth,
-		cell_size: 600 + Math.random() * 65,
+		cell_size: 800 + (Math.random() * 10),
 		x_colors: colors
 	})
-
-	return pattern.png()
 }

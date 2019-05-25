@@ -32,7 +32,7 @@ export default {
   text-align: center;
   color: $orange;
   max-width: 100vw;
-  height: 100%;
+  height: 100vh;
   padding-top: 52px;
 
   @include tablet {
