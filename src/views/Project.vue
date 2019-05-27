@@ -12,7 +12,6 @@
 
 <script>
 import { mapState } from 'vuex'
-import { Carousel, Slide } from 'vue-carousel';
 import { VueperSlides, VueperSlide } from 'vueperslides'
 
 export default {
