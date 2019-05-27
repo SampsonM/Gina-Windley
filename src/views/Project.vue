@@ -71,6 +71,7 @@ export default {
   &__slides {
     background-color: $orange;
     height: 400px;
+    border-bottom: 1px solid $orange;
 
     @include tablet {
       height: 500px;

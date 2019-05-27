@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import Project from './views/Project.vue'
-import About from './views/About.vue'
 
 Vue.use(Router)
 
@@ -16,12 +14,12 @@ export default new Router({
     {
       path: '/project',
       name: 'project',
-      component: Project
+      component: () => import('./views/Project.vue')
     },
     {
       path: '/about',
       name: 'about',
-      component: About
+      component: () => import('./views/About.vue')
     }
   ],
   scrollBehavior () {

@@ -34,57 +34,6 @@
   z-index: 1;
   opacity: 1;
 }
-.vueperslides--3d .vueperslide {
-  position: absolute;
-  z-index: -1;
-}
-.vueperslides--3d .vueperslide--active,
-.vueperslides--3d .vueperslide--next-slide,
-.vueperslides--3d .vueperslide--previous-slide {
-  z-index: 0;
-}
-.vueperslides--3d .vueperslide--active {
-  z-index: 1;
-}
-.vueperslides--3d .vueperslide[face="front"] {
-  -webkit-transform: rotateY(90deg) translateX(-50%) rotateY(-90deg);
-  transform: rotateY(90deg) translateX(-50%) rotateY(-90deg);
-}
-.vueperslides--3d .vueperslide[face="right"] {
-  -webkit-transform: rotateY(90deg) translateX(50%);
-  transform: rotateY(90deg) translateX(50%);
-  -webkit-transform-origin: 100% 0;
-  transform-origin: 100% 0;
-}
-.vueperslides--3d .vueperslide[face="back"] {
-  -webkit-transform: rotateY(270deg) translateX(-50%) rotateY(-90deg);
-  transform: rotateY(270deg) translateX(-50%) rotateY(-90deg);
-}
-.vueperslides--3d .vueperslide[face="left"] {
-  -webkit-transform: rotateY(270deg) translateX(-50%);
-  transform: rotateY(270deg) translateX(-50%);
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
-}
-.vueperslides:not(.no-shadow):not(.vueperslides--3d)
-  .vueperslides__parallax-wrapper:after,
-.vueperslides:not(.no-shadow):not(.vueperslides--3d)
-  .vueperslides__parallax-wrapper:before {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: -1em;
-  right: -1em;
-  height: 2em;
-  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
-  z-index: 2;
-}
-.vueperslides:not(.no-shadow):not(.vueperslides--3d)
-  .vueperslides__parallax-wrapper:after {
-  top: 100%;
-  bottom: auto;
-}
 .vueperslides__arrows {
   color: #fff;
 }
@@ -207,11 +156,6 @@
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
-.vueperslides--3d .vueperslides__track {
-  overflow: visible;
-  -webkit-perspective: 100em;
-  perspective: 100em;
-}
 .vueperslides__track-inner {
   white-space: nowrap;
   -webkit-transition: transform 0.5s ease-in-out;
@@ -222,10 +166,6 @@
   white-space: normal;
   -webkit-transition: none;
   transition: none;
-}
-.vueperslides--3d .vueperslides__track-inner {
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
 }
 .vueperslides__track--mousedown .vueperslides__track-inner {
   -webkit-transition: transform 0.2s ease-in-out !important;
