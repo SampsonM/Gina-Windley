@@ -65,9 +65,16 @@ export default {
 }
 
 .projects {
+  height: 92vh;
+  overflow: hidden;
+
   &__slides {
     background-color: $orange;
-    height: 500px;
+    height: 400px;
+
+    @include tablet {
+      height: 500px;
+    }
   }
 }
 
@@ -77,6 +84,22 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 20%;
+}
+
+.text-box {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px 10px 10px;
+  overflow: scroll;
+
+  @include tablet {
+    width: 50vw;
+    margin: 10px auto;
+  }
+}
+
+p {
+  margin: 0;
 }
 </style>
 
