@@ -1,4 +1,4 @@
-import { colors } from '../assets/constants'
+import colors from '../assets/colors.json'
 import Trianglify from 'trianglify'
 
 export const patternGen = () => {

@@ -15,7 +15,7 @@
 // @ is an alias to /src
 import GinaLine from '@/components/GinaLine.vue'
 import ProjectsContainer from '@/components/ProjectsContainer.vue'
-import { projects } from '../assets/constants.js'
+import projects from '../assets/projects.json'
 import { mapActions } from 'vuex'
 
 export default {

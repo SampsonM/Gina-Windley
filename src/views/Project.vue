@@ -1,6 +1,6 @@
 <template>
   <div class="projects">
-    <VueperSlides class="projects__slides" :autoplay="true" :touchable="true" :slide-ratio="0.3" v-if="images.length > 1">
+    <VueperSlides class="projects__slides" speed="10000" :autoplay="true" :touchable="true" :slide-ratio="0.3" v-if="images.length > 1">
       <VueperSlide
         class="vueperslide"
         v-for="(image, i) in images"
@@ -14,17 +14,25 @@
       v-lazy:background-image="imageURL(images[0])">
     </div>
 
-    <p>{{projectPageData.description}}</p>
+    <div class="text-box"></div>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 import { VueperSlides, VueperSlide } from 'vueperslides'
 
 export default {
   name: 'Projects',
   components: { VueperSlides, VueperSlide },
+  created() {
+    this.getLocalStorageProjectInfo()
+  },
+  mounted() {
+    if (this.projectPageData.images) {
+      document.querySelector('.text-box').innerHTML = this.projectPageData.description
+    }
+  },
   computed: {
     ...mapState([
       'projectPageData'
@@ -34,6 +42,9 @@ export default {
     }
   },
   methods: {
+    ...mapActions([
+      'getLocalStorageProjectInfo'
+    ]),
     imageURL(image) {
 			return image.isLocalImg ? this.getImgUrl(image.URL) : image.URL
 	  },
