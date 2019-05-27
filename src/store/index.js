@@ -7,21 +7,21 @@ import { projects } from '../assets/constants'
 Vue.use(Vuex)
 
 const state = {
-	infoPageData: {}
+	projectPageData: {}
 }
 
 const getters = {}
 
 const actions = {
-	updateInfoPageData: ({ commit, state }, payload) => {		
+	updateProjectPageData: ({ commit, state }, payload) => {		
 		const data = projects.find(proj => proj.name === payload.section)
-		commit('UPDATE_INFO_PAGE_DATA', data)
+		commit('UPDATE_PROJECT_PAGE_DATA', data)
 	}
 }
 
 const mutations = {
-	UPDATE_INFO_PAGE_DATA(state, payload) {
-		state.infoPageData = payload;
+	UPDATE_PROJECT_PAGE_DATA(state, payload) {
+		state.projectPageData = payload;
 	}
 }
 

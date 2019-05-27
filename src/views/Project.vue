@@ -1,12 +1,20 @@
 <template>
   <div class="projects">
-    <VueperSlides :disableArrowsOnEdges="true" :touchable="true" :slide-ratio="0.3">
+    <VueperSlides class="projects__slides" :autoplay="true" :touchable="true" :slide-ratio="0.3" v-if="images.length > 1">
       <VueperSlide
+        class="vueperslide"
         v-for="(image, i) in images"
         :key="i"
         v-lazy:background-image="imageURL(image)">
       </VueperSlide>
     </VueperSlides>
+
+    <div v-else
+      class="no-slider-image"
+      v-lazy:background-image="imageURL(images[0])">
+    </div>
+
+    <p>{{projectPageData.description}}</p>
   </div>
 </template>
 
@@ -16,20 +24,13 @@ import { VueperSlides, VueperSlide } from 'vueperslides'
 
 export default {
   name: 'Projects',
-  data() {
-    return {
-    }
-  },
   components: { VueperSlides, VueperSlide },
   computed: {
     ...mapState([
-      'infoPageData'
+      'projectPageData'
     ]),
     images() {
-      return this.infoPageData.images
-    },
-    imageMarkup() {
-      return '<div>hello</div>'
+      return this.projectPageData.images
     }
   },
   methods: {
@@ -45,12 +46,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../lib/_colors.scss";
+@import "../lib/_mixins.scss";
+
 .vueperslides {
   height: 500px;
 }
 
-.vueperslides__parallax-wrapper {
+.projects {
+  &__slides {
+    background-color: $orange;
+    height: 500px;
+  }
+}
+
+.no-slider-image {
+  width: 100%;
   height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 20%;
 }
 </style>
 

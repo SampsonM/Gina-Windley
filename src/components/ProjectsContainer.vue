@@ -47,14 +47,14 @@ export default {
   },
   methods: {
     ...mapActions([
-			'updateInfoPageData'
+			'updateProjectPageData'
 		]),
     getImgUrl(url) {
 			let images = require.context('../assets/images', true, /\.jpg|\.png$/)
 			return images(url)
     },
     handleClick(image) {
-      this.updateInfoPageData(image)
+      this.updateProjectPageData(image)
     },
     getShuffledImages() {
       let imgs = []
@@ -105,7 +105,7 @@ export default {
     display: grid;
     padding: 10px;
     grid-template-columns: repeat(4, 30vw);
-    grid-template-rows: repeat(5, 20vw);
+    grid-template-rows: repeat(5, 20vh);
   }
 
   &__project {
