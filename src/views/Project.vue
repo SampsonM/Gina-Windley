@@ -61,11 +61,11 @@ export default {
 @import "../lib/_mixins.scss";
 
 .vueperslides {
-  height: 500px;
+  height: 65%;
 }
 
 .projects {
-  height: 92vh;
+  height: 100%;
   overflow: hidden;
 
   &__slides {
@@ -89,7 +89,7 @@ export default {
 
 .text-box {
   width: 100%;
-  height: 100%;
+  height: 35%;
   padding: 0 10px 10px 10px;
   overflow: scroll;
 
