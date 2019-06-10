@@ -62,6 +62,7 @@ export default {
 
 .vueperslides {
   height: 65%;
+  overflow: hidden;
 }
 
 .projects {
@@ -89,15 +90,15 @@ export default {
 
 .text-box {
   width: 100%;
-  height: 39%;
+  height: 38%;
   margin-bottom: 5px;
   padding: 0 10px 10px 10px;
   overflow: scroll;
 
   @include tablet {
     width: 50vw;
-    height: 50%;
-    margin: 10px auto;
+    height: 49%;
+    margin: 0 auto 10px;
   }
 }
 
