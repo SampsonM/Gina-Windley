@@ -70,18 +70,18 @@ export default {
 
   &__slides {
     background-color: $orange;
-    height: 400px;
+    height: 60%;
     border-bottom: 1px solid $orange;
 
     @include tablet {
-      height: 500px;
+      height: 50%;
     }
   }
 }
 
 .no-slider-image {
   width: 100%;
-  height: 500px;
+  height: 50%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 20%;
@@ -89,12 +89,14 @@ export default {
 
 .text-box {
   width: 100%;
-  height: 35%;
+  height: 39%;
+  margin-bottom: 5px;
   padding: 0 10px 10px 10px;
   overflow: scroll;
 
   @include tablet {
     width: 50vw;
+    height: 50%;
     margin: 10px auto;
   }
 }
