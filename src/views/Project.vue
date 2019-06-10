@@ -75,7 +75,9 @@ export default {
     border-bottom: 1px solid $orange;
 
     @include tablet {
-      height: 50%;
+      float: left;
+      height: 100%;
+      width: 70%;
     }
   }
 }
@@ -96,9 +98,9 @@ export default {
   overflow: scroll;
 
   @include tablet {
-    width: 50vw;
-    height: 49%;
-    margin: 0 auto 10px;
+    width: 30%;
+    height: 100%;
+    margin: auto 10px;
   }
 }
 
