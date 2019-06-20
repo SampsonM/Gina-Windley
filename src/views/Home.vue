@@ -62,7 +62,7 @@ export default {
     flex-direction: row-reverse;
     justify-content: space-between;
     margin: 0;
-    padding: 15px;
+    padding: 0 10px 10px 0;
     height: 100%;
     border-bottom: 1px solid $orange;
   }

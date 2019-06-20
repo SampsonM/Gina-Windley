@@ -26,11 +26,12 @@ export default {
 }
 
 #app {
-  font-family: "Poppins";
+  font-family: "TTChocolates-Regular";
+  font-size: 18px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: $orange;
+  color: #252525;
   max-width: 100vw;
   height: 100vh;
   padding-top: 52px;

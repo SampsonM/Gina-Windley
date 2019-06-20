@@ -48,6 +48,8 @@ export default {
     bottom: auto;
     top: 65px;
     border-bottom: 1px solid $orange;
+    height: 27px;
+    padding-top: 4px;
   }
 }
 

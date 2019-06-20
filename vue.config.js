@@ -7,7 +7,7 @@ module.exports = {
 		plugins: [
 			new CnameWebpackPlugin({
 			  domain: 'www.gina-windley.co.uk',
-			}),
+			})
 		]
 	}
 };

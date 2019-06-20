@@ -72,12 +72,11 @@ export default {
   &__slides {
     background-color: $orange;
     height: 60%;
-    border-bottom: 1px solid $orange;
 
     @include tablet {
       float: left;
       height: 100%;
-      width: 70%;
+      width: 60%;
     }
   }
 }
@@ -96,11 +95,12 @@ export default {
   margin-bottom: 5px;
   padding: 0 10px 10px 10px;
   overflow: scroll;
+  text-align: justify;
 
   @include tablet {
-    width: 30%;
+    width: 40%;
     height: 100%;
-    margin: auto 10px;
+    padding: 15px 30px;
   }
 }
 

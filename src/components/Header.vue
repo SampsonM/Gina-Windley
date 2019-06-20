@@ -29,7 +29,7 @@ export default {
 	background: #ffffffce;
 
 	@include tablet {
-		height: 65px;
+		height: 66px;
 	}
 
   	a {

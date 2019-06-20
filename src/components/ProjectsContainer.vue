@@ -3,7 +3,7 @@
     <div
       class="projects-list__project"
       v-for="(image, i) in nestedImages"
-      :key="i" :class="{ 'no-hover' : image.link === '' }">
+      :key="i" :class="{ 'no-hover' : image.link == undefined }">
       
       <router-link :to="image.link" v-if="image.link">
         <div
@@ -59,7 +59,7 @@ export default {
     getShuffledImages() {
       let imgs = []
 
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < 9; i++) {
         imgs.push({ id: i })
       }
 
@@ -78,7 +78,7 @@ export default {
       return shuffleImages(imgs)
     },
     updateCanvasPatterns() {
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < 9; i++) {
         const pattern = patternGen();
         pattern.canvas(document.querySelector(`.canvas-${i}`))
       }
@@ -104,8 +104,8 @@ export default {
   @include tablet {
     display: grid;
     padding: 10px;
-    grid-template-columns: repeat(4, 30vw);
-    grid-template-rows: repeat(5, 20vh);
+    grid-template-columns: repeat(3, 33vw);
+    grid-template-rows: repeat(12, 20vh);
   }
 
   &__project {
@@ -142,6 +142,8 @@ export default {
     }
 
     &.no-hover {
+      opacity: 0.8;
+
       .projects-list__project-bg {
         opacity: 1;
         transform: scale(1)

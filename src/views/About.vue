@@ -9,13 +9,14 @@
 
     <div class="about__text-div">
       <p class="about__text">
-        I'm Gina Windley, in July 2015 I graduated with an Upper Second Class Honours in Architecture BA (Hons) from Northumbria University. 
-        <br><br>
-        I am now on the next chapter of my Architecture accreditation in my final year of studying an MArch Sustainable Architecture degree at the Centre for Alternative Technology Graduate School for the Environment. After a year out volunteering building following working as a Part I Architectural Assistant in the Lake District.
-        <br><br>
-        My architectural interest lies in sustainable design as a response to both social and historical contexts of the site and environment.  Using innovative design strategies I overcome challenges that occur throughout the design process, with the aim of creating beautiful spaces for people to occupy.
-        <br><br>
-        Thank you for taking the time to view my portfolio, please feel free to contact me using the information provided in the Contact page.
+        <b>Hello</b>, my name is Gina.<br><br>
+        I was born in the North West and I am now based in Manchester, UK where I hope to seek part II experience after recently graduating from my Sustainable Architecture MArch. Please enjoy this selection of work from my architectural academic journey so far. If you have any questions or just want a chat please don’t hesitate to <a href="mailto:gina.windley@gmail.com">get in touch</a><br><br>
+        <b>Education</b><br>
+        Sustainable Architecture MArch (2:1 TBC) Centre for Alternative Technology Graduate School for the Environment, 2017-2019<br>
+        Architecture Ba Hons (2:1) Northumbria University, 2012-2015<br><br>
+        <b>Work Experience</b><br>
+        Stanton Andrews Architects, Clitheroe, 2017-2018<br>
+        ADL Architects, Windermere, 2015-2016
       </p>
     </div>
 
@@ -93,6 +94,10 @@ export default {
       text-align: left;
       margin-left: 10px;
       width: 60vw;
+    }
+
+    a {
+      color: $orange;
     }
   }
 
