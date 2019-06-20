@@ -63,6 +63,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  position: relative;
 
   @include desktop {
     flex-direction: row;

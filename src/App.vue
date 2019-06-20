@@ -26,7 +26,7 @@ export default {
 }
 
 #app {
-  font-family: "TTChocolates-Regular";
+  font-family: "Poppins";
   font-size: 18px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
