@@ -37,7 +37,7 @@ export default {
   color: $orange;
   position: sticky;
   letter-spacing: 5px;
-  font-weight: 500;
+  font-weight: 400;
   position: fixed;
   bottom: 0;
   top: auto;
@@ -49,7 +49,6 @@ export default {
     top: 65px;
     border-bottom: 1px solid $orange;
     height: 27px;
-    padding-top: 4px;
   }
 }
 

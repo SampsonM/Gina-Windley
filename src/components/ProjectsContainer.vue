@@ -104,7 +104,7 @@ export default {
   @include tablet {
     display: grid;
     padding: 10px;
-    grid-template-columns: repeat(3, 33vw);
+    grid-template-columns: repeat(3, 33%);
     grid-template-rows: repeat(12, 20vh);
   }
 
