@@ -57,4 +57,12 @@ export default {
     opacity: 0.03;
   }
 }
+
+a {
+  color: $orange;
+
+  &:visited {
+    color: $dull-orange
+  }
+}
 </style>
