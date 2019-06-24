@@ -58,28 +58,25 @@ export default {
     },
     getShuffledImages() {
       let imgs = []
-
-      for (let i = 0; i < 9; i++) {
-        imgs.push({ id: i })
-      }
+      let patternNum = 0;
 
       for (let i = 0; i < this.images.length; i++) {
-        imgs.push(...this.images[i].images)
-      }
-
-      function shuffleImages(a) {
-        for (let i = a.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [a[i], a[j]] = [a[j], a[i]]
+        for(let j = 0; j < 4; j++) {
+          if (this.images[i].images[j]) {
+            if(imgs.length%2!==0) {
+              imgs.push({id: patternNum})
+              patternNum++
+            }
+            imgs.push(this.images[i].images[j])
+          }
         }
-        return a
       }
 
-      return shuffleImages(imgs)
+      return imgs
     },
     updateCanvasPatterns() {
-      for (let i = 0; i < 9; i++) {
-        const pattern = patternGen();
+      for (let i = 0; i < 16; i++) {
+        const pattern = patternGen()
         pattern.canvas(document.querySelector(`.canvas-${i}`))
       }
     },
@@ -130,14 +127,18 @@ export default {
       background-color: #fdd0a3;
 
       & .projects-list__project-bg {
-        transition: 300ms ease-in;
-        opacity: 0.08;
-        transform: scale(1.05);
+        @include tablet {
+          transition: 300ms ease-in;
+          opacity: 0.1;
+          transform: scale(1.05);
+        }
       }
 
       & .projects-list__project-bg--text {
-        transition: 300ms ease-in;
-        opacity: 1;
+        @include tablet {
+          transition: 300ms ease-in;
+          opacity: 1;
+        }
       }
     }
 
@@ -159,17 +160,6 @@ export default {
       color: white;
     }
 
-    & p {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      margin: 0;
-      font-weight: 500;
-      font-size: 25px;
-      opacity: 0;
-    }
-
     canvas {
       height: 100%;
       width: 100%;
@@ -177,6 +167,7 @@ export default {
   }
 
   &__project-bg {
+    filter: blur(1px);
     transition: 300ms;
     height: 100%;
     width: 100%;
@@ -184,8 +175,46 @@ export default {
     background-repeat: no-repeat;
     background-position: center;
 
+    @include tablet {
+      filter: none;
+    }
+
     &[lazy=loading] {
       background-color: $orange;
+    }
+
+    &--text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 0;
+      margin: 0;
+      color: #444;
+      background: #ffffff82;
+      font-weight: 500;
+      font-size: 25px;
+      width: 100%;
+      height: 100%;
+
+      @include tablet {
+        top: 50%;
+        left: 50%;
+        font-size: 30px;
+        bottom: auto;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        color: #fff;
+        opacity: 0;
+      }
+    }
+  }
+
+  &__project-text {
+    color: black;
+
+    @include tablet {
+      display: none;
     }
   }
 }
