@@ -61,25 +61,33 @@ export default {
       let patternNum = 0;
 
       for (let i = 0; i < this.images.length; i++) {
-        for(let j = 0; j < 4; j++) {
-          if (this.images[i].images[j]) {
-            if(imgs.length%2!==0) {
-              imgs.push({id: patternNum})
-              patternNum++
-            }
-            imgs.push(this.images[i].images[j])
-          }
+        if (i > 0) {
+          imgs.push(...this.images[i].images)
+        }
+      }
+
+      for (let i = imgs.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [imgs[i], imgs[j]] = [imgs[j], imgs[i]];
+      }
+
+      imgs.unshift(...this.images[0].images)
+      
+      for(let i = 0; i < imgs.length; i++) {
+        if(i%2!==0) {
+          imgs.splice(i, 0, {id: patternNum})
+          patternNum++
         }
       }
 
       return imgs
     },
     updateCanvasPatterns() {
-      for (let i = 0; i < 16; i++) {
+      for (let i = 0; i < 18; i++) {
         const pattern = patternGen()
         pattern.canvas(document.querySelector(`.canvas-${i}`))
       }
-    },
+    }
   }
 }
 </script>
