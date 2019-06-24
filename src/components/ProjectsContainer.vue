@@ -158,7 +158,7 @@ export default {
     }
 
     &.no-hover {
-      opacity: 0.6;
+      opacity: 0.8;
 
       .projects-list__project-bg {
         opacity: 1;
