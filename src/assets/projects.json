@@ -16,6 +16,18 @@
     "description": "<p><b>Manufactory at Pomona Island</b><br><i>Academic Work | Centre for Alternative Technology<br>5th year project 2018/19<br>Programs used: Autodesk Revit, Sketch up Adobe Photoshop, InDesign and Illustrator</i><br><br>The project is the sensitive sustainable regeneration of an uninhabited brownfield site; Pomona Island on the outskirts of Manchester. The area is in need of regeneration and this proposal tackles it sustainably; providing employment and preserving much sought after green space. The site will be brought back into use and house a manufacturing facility, training college and model village. Which will help to provide refuge and rehabilitation of the homeless population of Manchester. Creating a neighbourhood focus and identity through tourism economy. Improving the skills of residents to meet the job opportunities. With the long term goal to tackle homelessness at the source by providing employment and training on site in manufacturing prefabricated self build timber ‘kit‘ homes which will provide a solution to the current housing crisis.<br><br>In homage to the Pomona Garden’s and Palace the site will once again become a recreational green space within the city. Once again open to public activity it will become a place for people to enjoy the outdoors. The proposal will reinstate the docks which have since been filled in, visibly preserving the history of the site. The docks will no longer have industrial use but be home to wildlife and human activity. Nature will be encouraged by providing an informal nature reserve and preserving the majority of the site as green space. <br><br>There is three buildings on site, the factory, training college and temporary accommodation prefabricated ‘model village’ which houses the trainees.  The buildings are connected to one another through a public procession that makes a spectacle of the factory taking the visitors on a journey through the factory to the training college exhibition and ending in the café. The factory utilities the industrial artery of Manchester, the shipping canal in its delivery and distribution of manufacturing prefab homes. The factory sites itself in the footprint of historical dockland buildings. As the site itself sits on an angle pointing north east, the factory’s form is dominated by a 45° saw tooth roof to utilise true north light and solar power to the south.</p>",
     "images": [
       {
+        "URL": "https://i.ibb.co/Fx2ZCGK/Context-Map-A1-compressor.jpg",
+        "link": "/project",
+        "alt": "Context location plan",
+        "section": "Manufactory"
+      },
+      {
+        "URL": "https://i.ibb.co/wLwMGvM/1905-Proposed-Site-plan-sml-compressor.jpg",
+        "link": "/project",
+        "alt": "Site plan",
+        "section": "Manufactory"
+      },
+      {
         "URL": "./fdp/1.jpg",
         "link": "/project",
         "alt": "Final design project",
@@ -65,18 +77,6 @@
         "section": "Manufactory"
       },
       {
-        "URL": "https://i.ibb.co/Fx2ZCGK/Context-Map-A1-compressor.jpg",
-        "link": "/project",
-        "alt": "Context location plan",
-        "section": "Manufactory"
-      },
-      {
-        "URL": "https://i.ibb.co/wLwMGvM/1905-Proposed-Site-plan-sml-compressor.jpg",
-        "link": "/project",
-        "alt": "Site plan",
-        "section": "Manufactory"
-      },
-      {
         "URL": "https://i.ibb.co/0hYh38F/section-factory-zoom.jpg",
         "link": "/project",
         "alt": "Short - Factory detail section",
@@ -113,15 +113,15 @@
         "section": "Sk-Eye"
       },
       {
-        "URL": "https://i.ibb.co/R0Tzdcp/4.jpg",
-        "link": "/project",
-        "alt": "Sk-Eye framework",
-        "section": "Sk-Eye"
-      },
-      {
         "URL": "https://i.ibb.co/zsw6H1t/5.jpg",
         "link": "/project",
         "alt": "Sk-Eye skylight",
+        "section": "Sk-Eye"
+      },
+      {
+        "URL": "https://i.ibb.co/YDJ37g0/4-2.jpg",
+        "link": "/project",
+        "alt": "Sk-Eye framework",
         "section": "Sk-Eye"
       },
       {
@@ -174,6 +174,12 @@
         "isLocalImg": true
       },
       {
+        "URL": "https://i.ibb.co/d5pNbvn/1-3.jpg",
+        "link": "/project",
+        "alt": "Ghana rammed earth formwork",
+        "section": "Volunteering"
+      },
+      {
         "URL": "https://i.ibb.co/f97WrQz/2-3.jpg",
         "link": "/project",
         "alt": "Ghana rammed earth formwork",
@@ -183,12 +189,6 @@
         "URL": "https://i.ibb.co/D819NcG/3-3.jpg",
         "link": "/project",
         "alt": "Ghana opokus house",
-        "section": "Volunteering"
-      },
-      {
-        "URL": "https://i.ibb.co/d5pNbvn/1-3.jpg",
-        "link": "/project",
-        "alt": "Ghana rammed earth formwork",
         "section": "Volunteering"
       }
     ]

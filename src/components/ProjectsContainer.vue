@@ -62,7 +62,11 @@ export default {
 
       for (let i = 0; i < this.images.length; i++) {
         if (i > 0) {
-          imgs.push(...this.images[i].images)
+          for(let j = 0; j < 2; j++) {
+            if(this.images[i].images[j]) {
+              imgs.push(this.images[i].images[j])
+            }
+          }
         }
       }
 
@@ -80,10 +84,12 @@ export default {
         }
       }
 
+      imgs.push({id: patternNum})
+
       return imgs
     },
     updateCanvasPatterns() {
-      for (let i = 0; i < 18; i++) {
+      for (let i = 0; i < 9; i++) {
         const pattern = patternGen()
         pattern.canvas(document.querySelector(`.canvas-${i}`))
       }
@@ -121,10 +127,11 @@ export default {
     scroll-snap-align: start;
     position: relative;
     transition: 400ms;
-    background-color: #f98433;
+    background-color: #f9853325;
     overflow: hidden;
 
     @include tablet {
+      background-color: #f98433;
       margin-bottom: 0;
       height: auto;
       width: auto;
@@ -151,7 +158,7 @@ export default {
     }
 
     &.no-hover {
-      opacity: 0.8;
+      opacity: 0.6;
 
       .projects-list__project-bg {
         opacity: 1;
@@ -198,8 +205,8 @@ export default {
       position: absolute;
       bottom: 0;
       margin: 0;
-      color: #444;
-      background: #ffffff82;
+      color: #383838e6;
+      background: #ffffff91;
       font-weight: 500;
       font-size: 25px;
       width: 100%;
