@@ -70,11 +70,6 @@ export default {
         }
       }
 
-      for (let i = imgs.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [imgs[i], imgs[j]] = [imgs[j], imgs[i]];
-      }
-
       imgs.unshift(...this.images[0].images)
       
       for(let i = 0; i < imgs.length; i++) {
@@ -182,7 +177,6 @@ export default {
   }
 
   &__project-bg {
-    filter: blur(1px);
     transition: 300ms;
     height: 100%;
     width: 100%;
@@ -190,38 +184,21 @@ export default {
     background-repeat: no-repeat;
     background-position: center;
 
-    @include tablet {
-      filter: none;
-    }
-
     &[lazy=loading] {
       background-color: $orange;
     }
 
     &--text {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       position: absolute;
-      bottom: 0;
-      margin: 0;
-      color: #383838e6;
-      background: #ffffff91;
       font-weight: 500;
-      font-size: 25px;
-      width: 100%;
-      height: 100%;
-
-      @include tablet {
-        top: 50%;
-        left: 50%;
-        font-size: 30px;
-        bottom: auto;
-        transform: translate(-50%, -50%);
-        margin: 0;
-        color: #fff;
-        opacity: 0;
-      }
+      top: 50%;
+      left: 50%;
+      font-size: 30px;
+      bottom: auto;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      color: #fff;
+      opacity: 0;
     }
   }
 
