@@ -8,6 +8,7 @@ module.exports = {
 			new CnameWebpackPlugin({
 			  domain: 'www.gina-windley.co.uk',
 			})
-		]
-	}
+		],
+	},
+	productionSourceMap: false,
 };

@@ -1,4 +1,4 @@
-import {createRouter, createWebHistory} from 'vue-router'
+import {createRouter, createWebHashHistory} from 'vue-router'
 import Home from './views/Home.vue'
 
 const createAppRouter = () => createRouter({
@@ -14,7 +14,7 @@ const createAppRouter = () => createRouter({
       component: () => import('./views/Project.vue')
     }
   ],
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   scrollBehavior () {
     return { x: 0, y: 0 }
   }
