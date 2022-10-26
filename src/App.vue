@@ -1,17 +1,18 @@
 <template>
-  <div id="app">
-    <Header></Header>
-    <router-view />
-  </div>
+  <Header />
+  <router-view />
+  <Footer />
 </template>
 
 <script>
 import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'app',
   components: {
-    Header
+    Header,
+    Footer
   }
 }
 </script>
@@ -26,6 +27,8 @@ export default {
 }
 
 #app {
+  display: flex;
+  flex-direction: column;
   font-family: "Poppins";
   font-size: 18px;
   -webkit-font-smoothing: antialiased;

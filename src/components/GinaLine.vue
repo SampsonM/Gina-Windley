@@ -33,23 +33,11 @@ export default {
   justify-content: space-evenly;
   width: 100vw;
   border: 1px solid $orange;
+  border-width: 0 1px 1px 1px;
   background:#ffffffce;
   color: $orange;
-  position: sticky;
   letter-spacing: 5px;
   font-weight: 400;
-  position: fixed;
-  bottom: 0;
-  top: auto;
-
-  @include tablet {
-    position: fixed;
-    border: none;
-    bottom: auto;
-    top: 65px;
-    border-bottom: 1px solid $orange;
-    height: 27px;
-  }
 }
 
 .G {

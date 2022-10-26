@@ -1,16 +1,14 @@
-import Vue from 'vue'
+import {createApp} from 'vue'
 import App from './App.vue'
-import router from './router'
-import store from './store'
-import VueLazyload from 'vue-lazyload'
+import createAppRouter from './router'
+import createAppStore from './store'
+import VueLazyLoad from 'vue3-lazyload'
 import './lib/slider.scss'
 
-Vue.use(VueLazyload)
+const app = createApp(App)
 
-Vue.config.productionTip = false
+app.use(VueLazyLoad)
+app.use(createAppStore())
+app.use(createAppRouter())
 
-new Vue({
-  router,
-  store,
-  render: h => h(App)
-}).$mount('#app')
+app.mount('#app')

@@ -1,10 +1,6 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import { createStore } from 'vuex'
 import 'es6-promise/auto'
-
 import projects from '../assets/projects.json'
-
-Vue.use(Vuex)
 
 const state = {
 	projectPageData: {}
@@ -33,9 +29,11 @@ const mutations = {
 	}
 }
 
-export default new Vuex.Store({
+const createAppStore = () => createStore({
   state,
   getters,
   actions,
   mutations
 })
+
+export default createAppStore

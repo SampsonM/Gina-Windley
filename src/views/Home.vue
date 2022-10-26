@@ -1,20 +1,23 @@
 <template>
   <div class="home">
+    <GinaLine />
+
 
     <section class="main-content">
+      <About />
+
       <ProjectsContainer
-        :images="projects"
+        :projects="projects"
         class="main-content__img-box" />
     </section>
 
-    <GinaLine />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 import GinaLine from '@/components/GinaLine.vue'
 import ProjectsContainer from '@/components/ProjectsContainer.vue'
+import About from '@/components/About.vue'
 import projects from '../assets/projects.json'
 import { mapActions } from 'vuex'
 
@@ -22,7 +25,8 @@ export default {
   name: 'home',
   components: {
     GinaLine,
-    ProjectsContainer
+    ProjectsContainer,
+    About
   },
   data() {
     return {
@@ -42,30 +46,14 @@ export default {
 
 .home {
   height: 100%;
-
-  @include tablet {
-		height: calc(100vh - 111px);
-    margin-top: 26px;
-	}
+  overflow: hidden;
 }
 
 .main-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
-  height: 100%;
+  height: calc(100% - 28px);
   width: 100vw;
-  margin: 0 auto;
-  padding: 10px 10px 36px 10px;
-  
-  @include tablet {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0 10px 10px 0;
-    height: 100%;
-    border-bottom: 1px solid $orange;
-  }
+  padding: 10px;
+  overflow: scroll;
 
   &__img-box {
     height: 100%;
