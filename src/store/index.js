@@ -1,5 +1,4 @@
 import { createStore } from 'vuex'
-import 'es6-promise/auto'
 import projects from '../assets/projects.json'
 
 const state = {
