@@ -1,19 +1,16 @@
 <template>
   <Header />
   <router-view />
-  <Footer />
 </template>
 
 <script>
 import Header from '@/components/Header.vue'
-import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'app',
   components: {
     Header,
-    Footer
-  }
+  },
 }
 </script>
 
@@ -27,7 +24,7 @@ export default {
 }
 
 #app {
-  display: flex;
+  display: block;
   flex-direction: column;
   font-family: "Poppins";
   font-size: 18px;
@@ -38,6 +35,7 @@ export default {
   max-width: 100vw;
   height: 100vh;
   padding-top: 52px;
+  overflow: scroll;
 
   @include tablet {
     padding-top: 66px;
@@ -67,5 +65,11 @@ a {
   &:visited {
     color: $dull-orange
   }
+}
+
+html, body {
+  height: 100%;
+  position: fixed;
+  min-height: -webkit-fill-available;
 }
 </style>

@@ -1,28 +1,26 @@
 <template>
-  <div class="projects-container">
-    <div class="projects-list">
-      <div
-        class="projects-list__project"
-        v-for="(image, i) in images"
-        :key="i">
-        
-        <router-link class="projects-list__project-image" :to="image.link">
-          <div
-            v-lazy:background-image="image.isLocalImg 
-              ? getImgUrl(image.URL)
-              : image.URL"
-            class="projects-list__project-bg"
-            lazy="loading"
-            @click="handleClick(image)">
-          </div>
+  <div class="projects-list">
+    <div
+      class="projects-list__project"
+      v-for="(image, i) in images"
+      :key="i">
+      
+      <router-link class="projects-list__project-image" :to="image.link">
+        <div
+          v-lazy:background-image="image.isLocalImg 
+            ? getImgUrl(image.URL)
+            : image.URL"
+          class="projects-list__project-bg"
+          lazy="loading"
+          @click="handleClick(image)">
+        </div>
 
-          <p @click="handleClick(image)"
-            class="projects-list__project-bg--text">
-            {{ image.section }}
-          </p>
-        </router-link>
+        <p @click="handleClick(image)"
+          class="projects-list__project-bg--text">
+          {{ image.section }}
+        </p>
+      </router-link>
 
-      </div>
     </div>
   </div>
 </template>
@@ -69,19 +67,14 @@ export default {
 @import "../lib/_colors.scss";
 @import "../lib/_mixins.scss";
 
-.projects-container {
-
-}
-
 .projects-list {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
   scroll-padding: 1rem;
-
-  @include tablet {
-  }
+  border-top: 1px solid $orange;
+  padding-top: 25px;
 
   &__project {
     width: 100%;

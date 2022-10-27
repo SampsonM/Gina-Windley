@@ -2,14 +2,16 @@
   <div class="home">
     <GinaLine />
 
-
     <section class="main-content">
       <About />
 
       <ProjectsContainer
         :projects="projects"
         class="main-content__img-box" />
+    
     </section>
+    
+    <Footer />
 
   </div>
 </template>
@@ -17,6 +19,7 @@
 <script>
 import GinaLine from '@/components/GinaLine.vue'
 import ProjectsContainer from '@/components/ProjectsContainer.vue'
+import Footer from '@/components/Footer.vue'
 import About from '@/components/About.vue'
 import projects from '../assets/projects.json'
 import { mapActions } from 'vuex'
@@ -26,7 +29,8 @@ export default {
   components: {
     GinaLine,
     ProjectsContainer,
-    About
+    About,
+    Footer
   },
   data() {
     return {
@@ -45,15 +49,12 @@ export default {
 @import "../lib/_mixins.scss";
 
 .home {
-  height: 100%;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .main-content {
-  height: calc(100% - 28px);
   width: 100vw;
   padding: 10px;
-  overflow: scroll;
 
   &__img-box {
     height: 100%;

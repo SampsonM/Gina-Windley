@@ -13,7 +13,8 @@
 @import "../lib/_colors.scss";
 
 footer {
-	position: relative;
+	position: relative; 
+  bottom: 0;
 	width: 100%;
 	height: 50px;
 	border-top: 1px solid $orange;

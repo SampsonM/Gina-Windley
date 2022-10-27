@@ -20,6 +20,7 @@
     "node-sass": "^7.0.3",
     "sass-loader": "^13.1.0",
     "vue-template-compiler": "^2.7.13",
-    "vueperslides": "^3.5.1"
+    "vueperslides": "^3.5.1",
+    "webpack-node-externals": "^3.0.0"
   }
 }

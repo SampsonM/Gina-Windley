@@ -27,6 +27,7 @@ export default {
 
 .about {
   padding: 10px 20px;
+  padding-bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,7 +46,6 @@ export default {
     overflow: scroll;
     margin-top: 10px;
     text-align: justify;
-    margin-bottom: 30px;
 
     @include tablet {
       text-align: left;
