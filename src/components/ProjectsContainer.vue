@@ -74,7 +74,7 @@ export default {
   padding: 0;
   scroll-padding: 1rem;
   border-top: 1px solid $orange;
-  padding-top: 25px;
+  padding-top: 10px;
 
   &__project {
     width: 100%;

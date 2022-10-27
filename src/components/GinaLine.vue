@@ -29,6 +29,8 @@ export default {
 @import "../lib/_mixins.scss";
 
 .GinaLine {
+  position: fixed;
+  z-index: 10;
   display: flex;
   justify-content: space-evenly;
   width: 100vw;

@@ -4,15 +4,10 @@
 
     <section class="main-content">
       <About />
-
-      <ProjectsContainer
-        :projects="projects"
-        class="main-content__img-box" />
-    
+      <ProjectsContainer :projects="projects" />
     </section>
     
     <Footer />
-
   </div>
 </template>
 
@@ -37,6 +32,9 @@ export default {
       projects
     }
   },
+  mounted() {
+    window.scrollTo(0,1)
+  },
   methods: {
     ...mapActions([
       'updateProjectPageData'
@@ -48,13 +46,10 @@ export default {
 @import "../lib/_colors.scss";
 @import "../lib/_mixins.scss";
 
-.home {
-  overflow: scroll;
-}
-
 .main-content {
+  overflow: scroll;
   width: 100vw;
-  padding: 10px;
+  padding: 20px 10px 10px 10px;
   display: inline-block;
 
   &__img-box {

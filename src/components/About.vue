@@ -61,7 +61,7 @@ export default {
   &__img {
     height: 60vw;
     border-radius: 5px;
-    margin: 15px;
+    margin: 20px;
 
     @include tablet {
       height: auto;

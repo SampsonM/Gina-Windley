@@ -1,12 +1,10 @@
 <template>
   <div class="projects">
-    <VueperSlides class="projects__slides" speed="10000" :autoplay="true" :touchable="true" :slide-ratio="0.3" v-if="images.length > 1">
+    <VueperSlides v-if="images.length > 1" class="projects__slides" transition-speed="350" :autoplay="false" :touchable="true" :slide-ratio="0.3">
       <VueperSlide
-        class="vueperslide"
-        v-for="(image, i) in images"
+        v-for="(slide, i) in slideContent"
         :key="i"
-        v-lazy:background-image="imageURL(image)">
-      </VueperSlide>
+        :image="slide.image" />
     </VueperSlides>
 
     <div v-else
@@ -15,6 +13,7 @@
     </div>
 
     <div class="text-box"></div>
+    
   </div>
 </template>
 
@@ -29,6 +28,7 @@ export default {
     this.getLocalStorageProjectInfo()
   },
   mounted() {
+    window.scrollTo(0,1)
     if (this.projectPageData.images) {
       document.querySelector('.text-box').innerHTML = this.projectPageData.description
     }
@@ -39,6 +39,14 @@ export default {
     ]),
     images() {
       return this.projectPageData.images
+    },
+    slideContent() {
+      return this.images.reduce((a, b) => {
+        return [...a, {
+          content: b.alt,
+          image: this.imageURL(b)
+        }]
+      }, [])
     }
   },
   methods: {
@@ -61,22 +69,19 @@ export default {
 @import "../lib/_mixins.scss";
 
 .vueperslides {
-  height: 65%;
+  width: 100%;
   overflow: hidden;
 }
 
 .projects {
-  height: 100%;
-  overflow: hidden;
-
   &__slides {
+    height: 40vh;
+    position: fixed;
     background-color: $orange;
-    height: 60%;
+    z-index: 10;
 
     @include tablet {
       float: left;
-      height: 100%;
-      width: 60%;
     }
   }
 }
@@ -91,11 +96,11 @@ export default {
 
 .text-box {
   width: 100%;
-  height: 38%;
   margin-bottom: 5px;
-  padding: 0 10px 10px 10px;
+  padding: 40vh 10px 10px 10px;
   overflow: scroll;
   text-align: justify;
+  display: inline-block;
 
   @include tablet {
     width: 40%;

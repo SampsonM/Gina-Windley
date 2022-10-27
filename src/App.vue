@@ -33,9 +33,8 @@ export default {
   text-align: center;
   color: #252525;
   max-width: 100vw;
-  height: 100vh;
+  height: auto;
   padding-top: 52px;
-  overflow: scroll;
 
   @include tablet {
     padding-top: 66px;
@@ -68,8 +67,7 @@ a {
 }
 
 html, body {
-  height: 100%;
-  position: fixed;
+  overflow: scroll;
   min-height: -webkit-fill-available;
 }
 </style>
