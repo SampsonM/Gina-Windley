@@ -26,7 +26,7 @@ export default {
 	padding: 5px 0;
 	z-index: 3;
 	border: 1px solid $orange;
-	background: #ffffffce;
+	background: #ffffff;
 
 	@include tablet {
 		height: 66px;

@@ -74,14 +74,22 @@ export default {
 }
 
 .projects {
+  @include desktop {
+    display: flex;
+    height: calc(100vh - 66px);
+  }
+
   &__slides {
     height: 40vh;
     position: fixed;
     background-color: $orange;
     z-index: 10;
 
-    @include tablet {
+    @include desktop {
+      position: relative;
       float: left;
+      height: 100%;
+      width: 60%;
     }
   }
 }
@@ -102,7 +110,7 @@ export default {
   text-align: justify;
   display: inline-block;
 
-  @include tablet {
+  @include desktop {
     width: 40%;
     height: 100%;
     padding: 15px 30px;
