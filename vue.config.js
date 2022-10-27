@@ -1,4 +1,6 @@
 const CnameWebpackPlugin = require('cname-webpack-plugin')
+var PeerDepsExternalsPlugin = require('peer-deps-externals-webpack-plugin');
+
 
 module.exports = {
 	outputDir: 'docs',
@@ -7,8 +9,9 @@ module.exports = {
 		plugins: [
 			new CnameWebpackPlugin({
 			  domain: 'www.gina-windley.co.uk',
-			})
-		]
+			}),
+			new PeerDepsExternalsPlugin()
+		],
 	},
 	productionSourceMap: false,
 };
