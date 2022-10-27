@@ -55,6 +55,7 @@ export default {
 .main-content {
   width: 100vw;
   padding: 10px;
+  display: inline-block;
 
   &__img-box {
     height: 100%;
