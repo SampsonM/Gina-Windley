@@ -1,16 +1,18 @@
 <template>
   <div class="projects">
-    <VueperSlides v-if="images.length > 1" class="projects__slides" transition-speed="350" :autoplay="false" :touchable="true" :slide-ratio="0.3">
+    <!-- <VueperSlides v-if="images.length > 1" class="projects__slides" transition-speed="350" :autoplay="false" :touchable="true" :slide-ratio="0.3">
       <VueperSlide
         v-for="(slide, i) in slideContent"
         :key="i"
         :image="slide.image" />
-    </VueperSlides>
+    </VueperSlides> -->
 
-    <div v-else
+    <ImageSlider class="projects__slides" :propImages="images" />
+
+    <!-- <div v-else
       class="projects__slides no-slider-image"
       v-lazy:background-image="imageURL(images[0])">
-    </div>
+    </div> -->
 
     <div class="text-box"></div>
     
@@ -20,10 +22,15 @@
 <script>
 import { mapState, mapActions } from 'vuex'
 import { VueperSlides, VueperSlide } from 'vueperslides'
+import ImageSlider from "@/components/ImageSlider.vue"
 
 export default {
   name: 'Projects',
-  components: { VueperSlides, VueperSlide },
+  components: {
+    VueperSlides,
+    VueperSlide,
+    ImageSlider
+  },
   created() {
     this.getLocalStorageProjectInfo()
   },
