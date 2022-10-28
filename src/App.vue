@@ -40,6 +40,10 @@ export default {
     padding-top: 66px;
   }
 
+  @include desktop {
+    overflow: hidden;
+  }
+
   &:before {
     content: ' ';
     display: block;
@@ -67,7 +71,8 @@ a {
 }
 
 html, body {
-  overflow: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   min-height: -webkit-fill-available;
 }
 </style>

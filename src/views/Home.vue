@@ -48,6 +48,7 @@ export default {
 
 .main-content {
   overflow: scroll;
+  overflow-x: hidden;
   width: 100vw;
   padding: 20px 10px 10px 10px;
   display: inline-block;

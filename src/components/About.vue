@@ -51,6 +51,7 @@ export default {
       text-align: left;
       margin-left: 10px;
       width: 60vw;
+      overflow: hidden;
     }
 
     a {

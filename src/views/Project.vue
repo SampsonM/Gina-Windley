@@ -8,7 +8,7 @@
     </VueperSlides>
 
     <div v-else
-      class="no-slider-image"
+      class="projects__slides no-slider-image"
       v-lazy:background-image="imageURL(images[0])">
     </div>
 
@@ -77,19 +77,27 @@ export default {
   @include desktop {
     display: flex;
     height: calc(100vh - 66px);
+    width: 100vw;
+    justify-content: space-evenly;
+    flex-direction: row;
   }
 
   &__slides {
     height: 40vh;
     position: fixed;
-    background-color: $orange;
+    background-color: #00000063;
     z-index: 10;
 
     @include desktop {
+      height: 65vh;
+      width: 45vw;
+      max-width: 850px;
+      margin: auto 0;
       position: relative;
-      float: left;
-      height: 100%;
-      width: 60%;
+      border-radius: 5px;
+      -webkit-box-shadow: 0px 0px 22px 2px rgb(154, 154, 154);
+      -moz-box-shadow: 0px 0px 22px 2px rgb(154, 154, 154);
+      box-shadow: 0px 0px 22px 2px rgb(154, 154, 154);
     }
   }
 }
@@ -106,14 +114,21 @@ export default {
   width: 100%;
   margin-bottom: 5px;
   padding: 40vh 10px 10px 10px;
-  overflow: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   text-align: justify;
   display: inline-block;
 
+  @include tablet {
+    padding: 41vh 30px 10px 30px;
+  }
+
   @include desktop {
     width: 40%;
-    height: 100%;
-    padding: 15px 30px;
+    height: 65vh;
+    padding: 0;
+    display: inline;
+    margin: auto 0;
   }
 }
 

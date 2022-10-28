@@ -21,7 +21,7 @@ export default {
 	top: 0;
 	box-sizing: border-box;
 	height: 52px;
-    min-width: 100%;
+  min-width: 100%;
 	overflow: hidden;
 	padding: 5px 0;
 	z-index: 3;
@@ -49,5 +49,6 @@ export default {
 
 .img-link {
 	height: 100%;
+	width: auto;
 }
 </style>
