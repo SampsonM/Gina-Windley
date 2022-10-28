@@ -1,15 +1,26 @@
 <template>
-	<div class="header">
-		<router-link to="/">
+	<div class="header" v-if="isAlreadyHome">
+		<img class="img-link"
+			src="../assets/images/logo.png"
+			alt="gina's logo">
+	</div>
+
+	<router-link to="/" v-else>
+		<div class="header">
 			<img class="img-link"
 				src="../assets/images/logo.png"
 				alt="gina's logo">
-		</router-link>
-	</div>
+		</div>
+	</router-link>
 </template>
 <script>
 export default {
-	name: 'Header'
+	name: 'Header',
+	computed: {
+		isAlreadyHome() {
+			return Boolean(this.$route.name === 'home')
+		}
+	},
 }
 </script>
 <style lang="scss" scoped>
